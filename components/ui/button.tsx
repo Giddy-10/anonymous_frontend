@@ -10,7 +10,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({style, href, children}) => {
   return (
-    <Link href={href} className={`p-2 rounded-lg transition-colors duration-300 ${style}`}>
+    <Link href={href} className={`px-10 py-2 rounded-3xl transition-colors duration-300 ${style}`}>
       {children}
     </Link>
   )

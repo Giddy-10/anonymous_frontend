@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
-const card = () => {
+// define type for props
+interface CardProps {
+  style: string;
+  children: ReactNode;
+}
+
+const Card: React.FC<CardProps> = ({style, children}) => {
   return (
-    <div>card</div>
+    <article className={`shadow-2xl	bg-slate-100 rounded-xl px-10 ${style}`}>
+      {children}
+    </article>
   )
 }
 
-export default card
+export default Card
