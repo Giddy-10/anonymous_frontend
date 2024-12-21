@@ -6,6 +6,8 @@ import Image from 'next/image';
 import AboutImage from '@/public/assets/about.gif'
 import { FcPlus } from "react-icons/fc";
 import { FcInvite } from "react-icons/fc";
+import { FcPortraitMode } from "react-icons/fc";
+
 
 const About = () => {
   return (
@@ -61,8 +63,8 @@ const About = () => {
           </Card>
           <Card style="">
             <div className="flex justify-center items-center gap-4 p-4">
-              <FcInvite className="text-3xl" />
-              <span><strong>Assured response</strong></span>
+              <FcPortraitMode className="text-3xl" />
+              <span><strong>User Annonimity</strong></span>
             </div>
             <hr />
             <div className="flex justify-center items-center p-2 text-center mb-3">
