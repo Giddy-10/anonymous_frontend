@@ -10,10 +10,7 @@ import { FcInvite } from "react-icons/fc";
 const About = () => {
   return (
     <Section style='flex flex-col justify-center items-center gap-2 p-4' color='' width='[70%]'>
-      <div className="flex justify-center items-center">
-
-      </div>
-      <div className="flex justify-center items-center gap-3 w-[70%]">
+      <div className="flex justify-center items-center gap-3 w-[90%]">
         <div className="flex flex-col gap-3 flex-1">
             <Card style=''>
                 <div className="flex justify-center items-center gap-4 p-4">
