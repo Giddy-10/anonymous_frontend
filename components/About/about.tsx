@@ -39,7 +39,7 @@ const About = () => {
         </div>
 
         <div className="flex flex-col gap-3 flex-1 rounded-xl overflow-hidden">
-            <Image src={AboutImage} alt='' className="w-full h-[27rem] object-cover"/>
+            <Image src={AboutImage} alt='' className="h-[27rem] object-cover"/>
         </div>
 
         <div className="flex flex-col gap-3 flex-1">
