@@ -9,7 +9,7 @@ import { FcSynchronize } from "react-icons/fc";
 
 const Hero = () => {
   return (
-    <Section width="w-[80%]" color="bg-red-600" style="flex justify-center items-center text-white">
+    <Section width="[80%]" color="bg-red-600" style="flex justify-center items-center text-white">
       <div className="mt-20 p-10 flex flex-col items-center justify-center relative">
         <div className="italic text-5xl text-slate-100 w-[60%] text-center p-5 leading-loose">
             <p>

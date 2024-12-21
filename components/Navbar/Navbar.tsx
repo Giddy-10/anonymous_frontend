@@ -21,7 +21,7 @@ const landingLinks: LandingPageLink[] = [
 
 const Navbar = () => {
     return (
-        <Section style="xl:grid xl:grid-cols-3 justify-center items-center gap-6 mb-2 md:flex md:justify-eve" width="90%" color="fixed">
+        <Section style="xl:grid xl:grid-cols-3 justify-center items-center gap-6 mb-2 md:flex md:justify-eve" width="[90%]" color="fixed">
             {/* Logo Section */}
             <div className="flex justify-center items-center gap-2 text-white">
                 <IoIosMicrophone className="text-4xl" />
