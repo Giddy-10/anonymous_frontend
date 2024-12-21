@@ -13,7 +13,7 @@ const About = () => {
       <div className="flex justify-center items-center">
 
       </div>
-      <div className="flex justify-center items-center gap-3">
+      <div className="flex justify-center items-center gap-3 w-[70%]">
         <div className="flex flex-col gap-3 flex-1">
             <Card style=''>
                 <div className="flex justify-center items-center gap-4 p-4">
