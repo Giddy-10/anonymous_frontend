@@ -44,7 +44,7 @@ const About = () => {
 
         {/* Center Image */}
         <div className="flex flex-col gap-3 flex-1 rounded-xl overflow-hidden">
-          <Image src={AboutImage} alt="" className="h-[27rem] object-cover" />
+          <Image src={AboutImage} alt="" className="h-[27rem] object-cover" unoptimized/>
         </div>
 
         {/* Right Cards */}
