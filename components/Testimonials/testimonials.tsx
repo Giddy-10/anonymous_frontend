@@ -1,23 +1,25 @@
 "use client";
 
+import React, { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { images } from "@/utils/testimonials_constants";
 import Description from "./description";
 import Section from "../ui/section";
 
-const Slider = () => {
+const Testimonials = () => {
   const [activeImage, setActiveImage] = useState(0);
 
-  const clickNext = () => {
-    activeImage === images.length - 1
-      ? setActiveImage(0)
-      : setActiveImage(activeImage + 1);
-  };
+  // Memoized clickNext function
+  const clickNext = useCallback(() => {
+    setActiveImage((prev) =>
+      prev === images.length - 1 ? 0 : prev + 1
+    );
+  }, [images.length]);
+
   const clickPrev = () => {
-    activeImage === 0
-      ? setActiveImage(images.length - 1)
-      : setActiveImage(activeImage - 1);
+    setActiveImage((prev) =>
+      prev === 0 ? images.length - 1 : prev - 1
+    );
   };
 
   useEffect(() => {
@@ -27,47 +29,47 @@ const Slider = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [activeImage]);
-  
+  }, [clickNext]);
+
   return (
     <Section color="" style="p-6" width="">
-        <div className="text-black flex justify-center items-center gap-4 p-6 italic text-5xl mb-4">
-            <span className="">What People</span>
-            <span className='text-red-500'>Say About</span>
-            <span>Anonymous</span>
-        </div>
+      <div className="text-black flex justify-center items-center gap-4 p-6 italic text-5xl mb-4">
+        <span>What People</span>
+        <span className="text-red-500">Say About</span>
+        <span>Anonymous</span>
+      </div>
 
-        <main className="grid place-items-center md:grid-cols-2 grid-cols-1 w-full mx-auto max-w-5xl shadow-2xl rounded-2xl bg-slate-200">
+      <main className="grid place-items-center md:grid-cols-2 grid-cols-1 w-full mx-auto max-w-5xl shadow-2xl rounded-2xl bg-slate-200">
+        <div
+          className={`w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0`}
+        >
+          {images.map((elem, idx) => (
             <div
-                className={`w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0`}
+              key={idx}
+              className={`${
+                idx === activeImage
+                  ? "block w-full h-[80vh] object-cover transition-all duration-500 ease-in-out"
+                  : "hidden"
+              }`}
             >
-                {images.map((elem, idx) => (
-                <div
-                    key={idx}
-                    className={`${
-                    idx === activeImage
-                        ? "block w-full h-[80vh] object-cover transition-all duration-500 ease-in-out"
-                        : "hidden"
-                    }`}
-                >
-                    <Image
-                    src={elem.src}
-                    alt=""
-                    width={400}
-                    height={400}
-                    className="w-full h-full object-cover md:rounded-tl-3xl md:rounded-bl-3xl"
-                    />
-                </div>
-                ))}
+              <Image
+                src={elem.src}
+                alt={elem.title}
+                width={400}
+                height={400}
+                className="w-full h-full object-cover md:rounded-tl-3xl md:rounded-bl-3xl"
+              />
             </div>
-            <Description
-                activeImage={activeImage}
-                clickNext={clickNext}
-                clickPrev={clickPrev}
-            />
-        </main>
+          ))}
+        </div>
+        <Description
+          activeImage={activeImage}
+          clickNext={clickNext}
+          clickPrev={clickPrev}
+        />
+      </main>
     </Section>
   );
 };
 
-export default Slider;
+export default Testimonials;

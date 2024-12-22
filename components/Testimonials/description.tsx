@@ -1,14 +1,12 @@
 import React from "react";
 import { images } from "@/utils/testimonials_constants";
 import { motion } from "framer-motion";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
-
+import { MdKeyboardDoubleArrowRight, MdKeyboardDoubleArrowLeft } from "react-icons/md";
 
 type Props = {
-  activeImage: any;
-  clickNext: any;
-  clickPrev: any;
+  activeImage: number; // index of the active image
+  clickNext: () => void; // function type for click handlers
+  clickPrev: () => void; // function type for click handlers
 };
 
 const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
@@ -44,7 +42,6 @@ const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
           >
             <div className="py-16 text-5xl font-extrabold">{elem.title}</div>
             <div className="leading-relaxed font-medium text-base tracking-wide h-60 md:h-40 italic text-gray-600">
-              {" "}
               {elem.desc}
             </div>
           </motion.div>
@@ -57,14 +54,14 @@ const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
               className="absolute bottom-2 right-10 cursor-pointer"
               onClick={clickPrev}
             >
-              <MdKeyboardDoubleArrowLeft className="font-3xl"/>
+              <MdKeyboardDoubleArrowLeft className="font-3xl" />
             </div>
 
             <div
               className="absolute bottom-2 right-2 cursor-pointer"
               onClick={clickNext}
             >
-              <MdKeyboardDoubleArrowRight className="font-3xl"/>
+              <MdKeyboardDoubleArrowRight className="font-3xl" />
             </div>
           </div>
         </div>
