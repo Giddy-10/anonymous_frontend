@@ -1,23 +1,42 @@
-import Hero from "@/components/Hero/Hero";
-import Navbar from "@/components/Navbar/Navbar";
-import Header from "@/components/Header/header";
-import About from "@/components/About/about";
-import Contact from "@/components/Contact/contact";
-import Testimonials from "@/components/Testimonials/testimonials";
-import FAQs from "@/components/FAQs/faqs";
-import Footer from "@/components/Footer/footer";
+'use client'
+
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import Section from "@/components/ui/section";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsLoading(false);
+      router.push('/pages/Landing');
+    };
+
+    if (document.readyState === "complete") {
+      // If the document is already fully loaded
+      handleLoad();
+    } else {
+      // Wait for the window to fully load
+      window.addEventListener("load", handleLoad);
+    }
+
+    // Cleanup event listener to avoid memory leaks
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, [router]);
+
   return (
-    <div className="">
-      <Navbar/>
-      <Hero/>
-      <Header/>
-      <About/>
-      <FAQs/>
-      <Contact/>
-      <Testimonials/>
-      <Footer/>
+    <div>
+      <Section style="flex justify-center items-center" color="" width="">
+        {isLoading ? (
+          <div>
+            <span>Loading...</span>
+          </div>
+        ) : null}
+      </Section>
     </div>
   );
 }
