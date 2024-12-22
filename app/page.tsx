@@ -4,6 +4,7 @@ import Header from "@/components/Header/header";
 import About from "@/components/About/about";
 import Contact from "@/components/Contact/contact";
 import Testimonials from "@/components/Testimonials/testimonials";
+import FAQs from "@/components/FAQs/faqs";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero/>
       <Header/>
       <About/>
+      <FAQs/>
       <Contact/>
       <Testimonials/>
     </div>
