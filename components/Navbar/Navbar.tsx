@@ -20,9 +20,9 @@ const landingLinks: LandingPageLink[] = [
 ];
 
 const Navbar = () => {
-    const [isScroll, setIsScroll] = useState<Boolean>(false)
-    const [isRoute, setIsRoute] = useState<Boolean>(false)
-    const [mounted, setMounted] = useState<Boolean>(false)
+    const [isScroll, setIsScroll] = useState<boolean>(false)
+    const [isRoute, setIsRoute] = useState<boolean>(false)
+    const [mounted, setMounted] = useState<boolean>(false)
 
     const pathname = usePathname()
 
