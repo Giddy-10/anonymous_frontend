@@ -11,18 +11,12 @@ export default function Home() {
   useEffect(() => {
     const handleLoad = () => {
       setIsLoading(false);
-      router.push('/pages/Landing');
+      router.push('/pages/landing');
     };
 
-    if (document.readyState === "complete") {
-      // If the document is already fully loaded
-      handleLoad();
-    } else {
-      // Wait for the window to fully load
-      window.addEventListener("load", handleLoad);
-    }
+    if (document.readyState === "complete") handleLoad();
+    else window.addEventListener("load", handleLoad);
 
-    // Cleanup event listener to avoid memory leaks
     return () => {
       window.removeEventListener("load", handleLoad);
     };
