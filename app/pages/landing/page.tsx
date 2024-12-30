@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '@/components/Navbar/Navbar'
 import Hero from '@/components/Hero/Hero'
 import Header from '@/components/Header/header'
 import About from '@/components/About/about'
