@@ -11,7 +11,6 @@ import Contact from '@/components/Contact/contact'
 const page = () => {
   return (
     <div>
-      <Navbar/>
       <Hero/>
       <Header/>
       <About/>
