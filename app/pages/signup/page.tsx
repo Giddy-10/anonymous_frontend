@@ -1,22 +1,22 @@
 import React from "react"
 import { BsLink } from "react-icons/bs"
 import { CgChevronRight, CgMail } from "react-icons/cg"
-import { FcKey } from "react-icons/fc"
+import { FcKey, FcLink } from "react-icons/fc"
 
 const page = () => {
     return (
         <div className="mt-60 md:mt-32">
             <form className="max-w-96 flex flex-col gap-2 mx-auto py-6 px-4 rounded-lg shadow">
                 <h2 className="text-2xl tracking-tight font-bold border-b pb-2 mb-2">
-                    Log in
+                    Sign up
                 </h2>
                 <div className="py-4 flex justify-end items-center">
-                    <p className="inline mx-2">Don't have an account?</p>
+                    <p className="inline mx-2">Already have an account?</p>
                     <a
-                        href="/pages/signup"
+                        href="/pages/login"
                         className="bg-info text-info-content rounded-btn py-2 px-4 hover:bg-neutral hover:text-neutral-content active:py-1 transition-all flex items-center gap-1"
                     >
-                        <BsLink className="inline" /> Sign up
+                        <BsLink className="inline" /> Log in
                     </a>
                 </div>
                 <label className="input input-bordered flex items-center gap-2">

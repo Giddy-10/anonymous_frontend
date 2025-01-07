@@ -6,9 +6,9 @@ import { BsFillPatchQuestionFill } from "react-icons/bs";
 const FAQs = () => {
   return (
     <Section color="" style="flex flex-col justify-center items-center" width="full">
-      <div className="flex justify-center items-center w-[80%] border shadow-xl rounded-xl">
-        <div className="flex flex-col p-6 gap-3 w-[40%] mt-[-22rem]">
-          <div className="text-5xl italic">
+      <div className="flex flex-col md:flex-row justify-center items-center md:w-[80%] border shadow-xl rounded-xl">
+        <div className="flex flex-col p-6 gap-3 md:w-[40%] md:mt-[-22rem]">
+          <div className="text-3xl md:text-5xl italic">
             <span>frequently </span>
             <span className="text-red-600"> asked</span>
             <span> questions</span>
@@ -20,7 +20,7 @@ const FAQs = () => {
           </div>
         </div>
 
-        <div className="w-[60%] p-4 flex flex-col justify-center items-center gap-2">
+        <div className="w-[80%] md:w-[60%] p-4 flex flex-col justify-center items-center gap-2">
           <Card style="shadow-xl rounded-xl text-black">
             <div className="flex justify-between items-center text-2xl p-4">
               <span className='italic'>What is anonymous</span>

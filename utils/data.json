@@ -1,0 +1,57 @@
+{
+    "notificationsData": [
+        {
+            "read": false,
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+            "read": false,
+            "text": "Vero sapiente alias architecto quod natus nobis voluptate officia delectus?"
+        },
+        {
+            "read": false,
+            "text": "Nisi officia tempore fuga sapiente, amet eius dolorem cumque fugit eum totam."
+        },
+        {
+            "read": false,
+            "text": "Vero sapiente alias architecto quod natus nobis voluptate officia delectus?"
+        },
+        {
+            "read": true,
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+            "read": true,
+            "text": "Nisi officia tempore fuga sapiente, amet eius dolorem cumque fugit eum totam."
+        }
+    ],
+
+    "feedbackData": [
+        {
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sapiente alias architecto quod natus nobis voluptate officia delectus? Nisi officia tempore fuga sapiente, amet eius dolorem cumque fugit eum totam.",
+            "timestamp": "2024-12-17 08:21:05"
+        },
+        {
+            "text": "Curabitur eget suscipit urna. Vestibulum elementum felis vitae tortor tempus viverra. Nunc gravida arcu hendrerit urna pulvinar tincidunt. Nam id arcu quis ante lacinia eleifend eget et dolor. Phasellus mi diam, imperdiet ut enim vitae, faucibus luctus neque. Ut id pharetra massa, sit amet consequat diam. Suspendisse lobortis sem nisi, pellentesque fringilla nisl porttitor in. Ut placerat ex arcu, quis maximus nulla luctus non. Sed eget egestas ipsum. Integer in lacinia nisl. Nullam vitae libero ac lacus pellentesque vehicula a consectetur libero.",
+            "timestamp": "2024-12-24 14:02:47"
+        }
+    ],
+
+    "historyData": [
+        {
+            "files": [],
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sapiente alias architecto quod natus nobis voluptate officia delectus?",
+            "timestamp": "2024-12-16 08:13:51"
+        },
+        {
+            "files": ["filename.exp"],
+            "text": "Nisi officia tempore fuga sapiente, amet eius dolorem cumque fugit eum totam.",
+            "timestamp": "2024-12-22 19:04:34"
+        },
+        {
+            "files": ["anotherfile.png", "yetanother.jpeg"],
+            "text": "Nisi officia tempore fuga sapiente, amet eius dolorem cumque fugit eum totam. Vero sapiente alias architecto quod natus nobis voluptate officia delectus? Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "timestamp": "2025-01-03 12:31:21"
+        }
+    ]
+}

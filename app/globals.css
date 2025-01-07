@@ -1,31 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
+    --red: #dc2626;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+html {
+  color: var(--background);
+  background: var(--foreground);
 }
 
 body {
-  color: var(--background);
-  background: var(--foreground);
-  font-family: "PT Serif", serif;
-  padding: 0;
-  margin: 0;
-  top: 0;
-  box-sizing: border-box;
+    font-family: "PT Serif", serif;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
+.hero-card-container {
+  background: linear-gradient(180deg, var(--red) 50%, transparent 50%, transparent);
+}
+
+.dashboard-card:hover > * {
+  opacity: 0.3;
+}
+.dashboard-card:hover > .always-visible {
+  opacity: 1;
+}
+.dashboard-card:active > .always-visible {
+  padding: 2rem;
+}
+.primary-radial-gradient {
+  padding: inherit;
+  /* background-image: radial-gradient(farthest-side at 100% 100%, oklch(var(--bc)) 0%, transparent 50%); */
+  background-image: linear-gradient(
+      270deg,
+      oklch(var(--in)) 2%,
+      transparent 15%
+  );
+}
+
+.text-radio-label {
+border-color: oklch(var(--in));
+color: oklch(var(--in))
+}
+.text-radio-label:hover, .text-radio-label:has(input:checked) {
+  background: oklch(var(--in));
+  color: oklch(var(--inc))
+  /* border-color: oklch(var(--p)); */
+}

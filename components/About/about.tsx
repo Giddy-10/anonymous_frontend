@@ -11,9 +11,9 @@ import { FcPortraitMode } from "react-icons/fc";
 
 const About = () => {
   return (
-    <Section style="flex flex-col justify-center items-center gap-6 p-4" color="" width="">
+    <Section style="flex flex-col justify-center items-center gap-6 p-4" id="about" color="" width="">
       {/* Content Wrapper */}
-      <div className="max-w-[80%] w-full flex justify-center items-center gap-6 mx-auto">
+      <div className="max-w-[80%] w-full flex flex-wrap justify-center items-center gap-6 mx-auto">
         {/* Left Cards */}
         <div className="flex flex-col gap-3 flex-1">
           <Card style="">

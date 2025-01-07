@@ -33,22 +33,22 @@ const Testimonials = () => {
 
   return (
     <Section color="" style="p-6" width="">
-      <div className="text-black flex justify-center items-center gap-4 p-6 italic text-5xl mb-4">
+      <div className="text-black flex flex-wrap justify-center items-center gap-4 p-6 italic text-4xl md:text-5xl mb-4">
         <span>What People</span>
         <span className="text-red-500">Say About</span>
         <span>Anonymous</span>
       </div>
 
-      <main className="grid place-items-center md:grid-cols-2 grid-cols-1 w-full mx-auto max-w-5xl shadow-2xl rounded-2xl bg-slate-200">
+      <div className="grid place-items-center grid-cols-1 md:grid-cols-2 w-full mx-auto max-w-5xl shadow-2xl rounded-2xl bg-slate-200">
         <div
-          className={`w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0`}
+          className={`w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 md:rounded-2xl p-4 md:p-0`}
         >
           {images.map((elem, idx) => (
             <div
               key={idx}
               className={`${
                 idx === activeImage
-                  ? "block w-full h-[80vh] object-cover transition-all duration-500 ease-in-out"
+                  ? "block w-full h-[25vh] md:h-[80vh] object-cover transition-all duration-500 ease-in-out"
                   : "hidden"
               }`}
             >
@@ -57,7 +57,7 @@ const Testimonials = () => {
                 alt={elem.title}
                 width={400}
                 height={400}
-                className="w-full h-full object-cover md:rounded-tl-3xl md:rounded-bl-3xl"
+                className="w-full h-full object-cover object-top md:rounded-tl-3xl md:rounded-bl-3xl"
               />
             </div>
           ))}
@@ -67,7 +67,7 @@ const Testimonials = () => {
           clickNext={clickNext}
           clickPrev={clickPrev}
         />
-      </main>
+      </div>
     </Section>
   );
 };

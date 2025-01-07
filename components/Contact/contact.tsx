@@ -17,13 +17,13 @@ const formFields = [
 
 const Contact = () => {
   return (
-    <Section color='p-0' width='screen' style='flex flex-col justify-center items-center'>
+    <Section color='p-0' width='screen' id="contact" style='relative flex flex-col justify-center items-center'>
       <div className="h-[30rem] overflow-hidden relative">
         <Image src={ContactImage} alt='' className='w-screen opacity-30'/>
       </div>
       <div className="absolute w-screen flex flex-col justify-center items-center">
-        <div className="flex flex-col justify-center items-center w-[50%] bg-slate-700 bg-opacity-30 p-6 rounded-xl">
-          <div className="text-black flex justify-center items-center gap-4 p-6 italic text-5xl">
+        <div className="flex flex-col justify-center items-center w-[80%] md:w-[50%] bg-slate-700 bg-opacity-30 p-6 rounded-xl">
+          <div className="text-black flex justify-center items-center gap-4 p-6 italic text-4xl md:text-5xl">
               <span className="">Contact </span>
               <span className='text-red-500'>Us</span>
           </div>
