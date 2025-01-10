@@ -7,10 +7,12 @@ import { FaFile, FaPercentage } from "react-icons/fa"
 import { RiReplyFill } from "react-icons/ri"
 
 import data from "@/utils/database.json"
+import DashboardRerouter from "@/components/DashboardLayout/DashboardRerouter"
 
 const Dashboard = ({ children }: { children: React.ReactNode }) => {
     return (
         <DashboardLayout>
+            <DashboardRerouter />
             <div className="stats shadow relative mb-8">
                 <div className="absolute bg-info w-2 aspect-square rounded-full right-[8px] top-[8px] animate-ping"></div>
                 <div className="stat">

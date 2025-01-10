@@ -22,7 +22,12 @@ const page = () => {
                 Reports
             </h3>
             <div className="w-full mb-2">
-                <Link className="block w-fit ml-auto mr-8 rounded-btn bg-info text-info-content py-2 px-4" href="/pages/dashboard/form"><PlusCircle className="inline mr-2" /> Write a report</Link>
+                <Link
+                    className="block w-fit ml-auto mr-8 rounded-btn bg-info text-info-content py-2 px-4 hover:bg-neutral hover:text-neutral-content"
+                    href="/pages/dashboard/form"
+                >
+                    <PlusCircle className="inline mr-2" /> Write a report
+                </Link>
             </div>
             <Table>
                 <TableCaption>A list of your recent complaints.</TableCaption>
