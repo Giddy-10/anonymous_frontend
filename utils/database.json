@@ -1,0 +1,74 @@
+{
+    "notifications": [
+        {
+            "type": "UPDATE",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+            "type": "MESSAGE",
+            "text": "Vero sapiente alias architecto quod natus nobis voluptate officia delectus?"
+        },
+        {
+            "type": "UPDATE",
+            "text": "Nisi officia tempore fuga sapiente, amet eius dolorem cumque fugit eum totam."
+        },
+        {
+            "type": "UPDATE",
+            "text": "Vero sapiente alias architecto quod natus nobis voluptate officia delectus?"
+        },
+        {
+            "type": "MESSAGE",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+            "type": "UPDATE",
+            "text": "Nisi officia tempore fuga sapiente, amet eius dolorem cumque fugit eum totam."
+        }
+    ],
+
+    "feedbacks": [
+        {
+            "title": "Lorem at Ipsum",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sapiente alias architecto quod natus nobis voluptate officia delectus? Nisi officia tempore fuga sapiente, amet eius dolorem cumque fugit eum totam.",
+            "uploaded_at": "2024-12-17 08:21:05"
+        },
+        {
+            "title": "Nisi by officia",
+            "text": "Curabitur eget suscipit urna. Vestibulum elementum felis vitae tortor tempus viverra. Nunc gravida arcu hendrerit urna pulvinar tincidunt. Nam id arcu quis ante lacinia eleifend eget et dolor. Phasellus mi diam, imperdiet ut enim vitae, faucibus luctus neque. Ut id pharetra massa, sit amet consequat diam. Suspendisse lobortis sem nisi, pellentesque fringilla nisl porttitor in. Ut placerat ex arcu, quis maximus nulla luctus non. Sed eget egestas ipsum. Integer in lacinia nisl. Nullam vitae libero ac lacus pellentesque vehicula a consectetur libero.",
+            "uploaded_at": "2024-12-24 14:02:47"
+        }
+    ],
+
+    "reports": [
+        {
+            "title": "Lorem at Ipsum",
+            "status": "IN PROGRESS",
+            "type": "LAW BREAK",
+            "image_data": [],
+            "audio_data": [],
+            "video_data": [],
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sapiente alias architecto quod natus nobis voluptate officia delectus?",
+            "uploaded_at": "2024-12-16 08:13:51"
+        },
+        {
+            "title": "Nisi by officia",
+            "status": "PENDING",
+            "type": "MISTREATMENT",
+            "image_data": [],
+            "audio_data": ["filename.mp3"],
+            "video_data": [],
+            "description": "Nisi officia tempore fuga sapiente, amet eius dolorem cumque fugit eum totam.",
+            "uploaded_at": "2024-12-22 19:04:34"
+        },
+        {
+            "title": "Vero sapiente with alias",
+            "status": "PENDING",
+            "type": "UNSATISFACTION",
+            "image_data": ["anotherfile.png", "yetanother.jpeg"],
+            "audio_data": [],
+            "video_data": [],
+            "description": "Nisi officia tempore fuga sapiente, amet eius dolorem cumque fugit eum totam. Vero sapiente alias architecto quod natus nobis voluptate officia delectus? Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "uploaded_at": "2025-01-03 12:31:21"
+        }
+    ]
+}

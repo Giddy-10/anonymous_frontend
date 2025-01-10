@@ -1,6 +1,6 @@
 import React from "react"
 import Section from "../ui/section"
-import Button from "../ui/button"
+import {Button} from "../ui/button"
 import Card from "../ui/card"
 import { FcDataProtection } from "react-icons/fc"
 import { FcCustomerSupport } from "react-icons/fc"
@@ -36,14 +36,12 @@ const Hero = () => {
                     </div>
                     <div className="mt-8 mb-20 flex justify-center items-center gap-4">
                         <Button
-                            href=""
-                            style="bg-white font-bold text-slate-700 xl:block md:hidden"
+                            className="bg-white font-bold text-slate-700 xl:block md:hidden"
                         >
                             Get Started
                         </Button>
                         <Button
-                            href=""
-                            style="bg-white font-bold text-slate-700 xl:block md:hidden"
+                            className="bg-white font-bold text-slate-700 xl:block md:hidden"
                         >
                             Contact us
                         </Button>

@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from '../ui/section'
-import Button from '../ui/button'
+import {Button} from '../ui/button'
 
 const Header = () => {
   return (
@@ -17,10 +17,10 @@ const Header = () => {
           </p>
         </div>
         <div className="mt-10 p-4 flex justify-center items-center gap-8">
-          <Button style='border-2 border-red-600 text-slate-700 hover:bg-red-500 hover:text-white' href=''>
+          <Button className='border-2 border-red-600 text-slate-700 hover:bg-red-500 hover:text-white'>
             Track your issue
           </Button>
-          <Button style='border-2 border-red-600 text-slate-700 hover:bg-red-500 hover:text-white' href=''>
+          <Button className='border-2 border-red-600 text-slate-700 hover:bg-red-500 hover:text-white'>
             Report an issue
           </Button>
         </div>

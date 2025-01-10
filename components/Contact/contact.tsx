@@ -7,7 +7,7 @@ import { MdOutlineMail } from 'react-icons/md'
 import { MdContentCopy } from "react-icons/md";
 import { LuCircleUserRound } from "react-icons/lu";
 import { LiaTelegramPlane } from "react-icons/lia";
-import Button from '../ui/button'
+import {Button} from '../ui/button'
 
 const formFields = [
   { icon: <LuCircleUserRound className="w-5 h-5 text-gray-500 dark:text-gray-400" />, placeholder: 'Your Name', type: 'text' },
@@ -43,7 +43,7 @@ const Contact = () => {
                 />
             </div>
             <div className="flex justify-center items-center p-4">
-              <Button style='border-2 border-red-600 text-slate-700 hover:bg-red-500 hover:text-white' href=''>
+              <Button className='border-2 border-red-600 text-slate-700 hover:bg-red-500 hover:text-white'>
                 Contact Us
               </Button>
             </div>

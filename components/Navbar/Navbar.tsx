@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react"
 import Section from "../ui/section"
-import Button from "../ui/button"
+import {Button} from "../ui/button"
 import { IoIosMicrophone } from "react-icons/io"
 import { TiThMenu } from "react-icons/ti"
 import Link from "next/link"
@@ -20,6 +20,7 @@ const landingLinks: LandingPageLink[] = [
 ]
 
 const Navbar = () => {
+    const [display, setDisplay] = useState<boolean>(true)
     const [isScroll, setIsScroll] = useState<boolean>(false)
     const [isRoute, setIsRoute] = useState<boolean>(false)
     const [mounted, setMounted] = useState<boolean>(false)
@@ -40,6 +41,9 @@ const Navbar = () => {
                 }
             }
             alertPath()
+            if (pathname.startsWith("/pages/dashboard")) {
+                setDisplay(false)
+            }
         }
     }, [pathname, mounted])
 
@@ -62,14 +66,20 @@ const Navbar = () => {
 
     return (
         <Section
-            style="text-sm md:text-base flex flex-wrap xl:grid xl:grid-cols-3 justify-center items-center gap-6 mb-2 md:flex md:justify-even"
+            style={
+                display
+                    ? "text-sm md:text-base flex flex-wrap xl:grid xl:grid-cols-3 justify-center items-center gap-6 mb-2 md:flex md:justify-even"
+                    : "hidden"
+            }
             width="[95%]"
             color={`fixed top-0 left-0 ${
-                isRoute
-                    ? "bg-red-600 z-50"
-                    : isScroll
-                    ? "bg-neutral-50 shadow-md z-50"
-                    : "bg-transparent z-50"
+                display
+                    ? isRoute
+                        ? "bg-red-600 z-50"
+                        : isScroll
+                        ? "bg-neutral-50 shadow-md z-50"
+                        : "bg-transparent z-50"
+                    : ""
             }`}
         >
             {/* Logo Section */}
@@ -88,7 +98,7 @@ const Navbar = () => {
 
             {/* Navigation Links */}
             <div
-                className={`grid grid-cols-5 justify-center items-center gap-3 ${
+                className={`grid grid-cols-4 justify-center items-center gap-3 ${
                     isScroll
                         ? "text-black"
                         : isRoute
@@ -115,21 +125,22 @@ const Navbar = () => {
 
             {/* buttons */}
             <div className="flex justify-center items-center gap-4 ">
+                <a href="/pages/login">
+                    <Button
+                        
+                        className={`${
+                            isRoute
+                                ? "bg-white text-black"
+                                : isScroll
+                                ? "border-2 border-red-600 text-slate-700 hover:bg-red-500 hover:text-white"
+                                : "bg-white text-slate-700 "
+                        } font-bold xl:block md:hidden`}
+                    >
+                        Log in
+                    </Button>
+                </a>
                 <Button
-                    href="/pages/login"
-                    style={`${
-                        isRoute
-                            ? "bg-white text-black"
-                            : isScroll
-                            ? "border-2 border-red-600 text-slate-700 hover:bg-red-500 hover:text-white"
-                            : "bg-white text-slate-700 "
-                    } font-bold xl:block md:hidden`}
-                >
-                    Log in
-                </Button>
-                <Button
-                    href=""
-                    style="border-red-800 border-2 text-white border-none text-2xl xl:hidden md:block"
+                    className="border-red-800 border-2 text-white border-none text-2xl xl:hidden md:block"
                 >
                     <TiThMenu />
                 </Button>

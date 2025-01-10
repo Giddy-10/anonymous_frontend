@@ -31,7 +31,7 @@ const ProgressBar = (props: ExpProps) => {
             ref={ref}
         >
             <motion.div
-                className="h-full bg-secondary relative rounded-r m-0"
+                className="h-full bg-[oklch(var(--s))] relative rounded-r m-0"
                 initial={{ width: 0 }}
                 animate={hasAnimated ? { width: `${lengthPercentage}%` } : {}}
                 transition={{
