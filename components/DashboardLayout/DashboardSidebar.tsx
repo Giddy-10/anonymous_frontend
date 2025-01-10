@@ -28,11 +28,11 @@ export function DashboardSidebar() {
     const pathname = usePathname()
 
     return (
-        <Sidebar className="border-r">
-            <SidebarHeader className="flex items-center p-4">
+        <Sidebar className="border-r bg-[var(--red)]">
+            <SidebarHeader className="flex items-center p-4 bg-[var(--red)] text-white">
                 <span className="text-xl font-bold">Dashboard</span>
             </SidebarHeader>
-            <SidebarContent>
+            <SidebarContent className="bg-[var(--red)] text-white">
                 <SidebarMenu>
                     {menuItems.map((item, index) =>
                         item.isSeparator ? (
@@ -52,7 +52,9 @@ export function DashboardSidebar() {
                                     </Link>
                                 </SidebarMenuButton>
                             </SidebarMenuItem>
-                        ) : ''
+                        ) : (
+                            ""
+                        )
                     )}
                 </SidebarMenu>
             </SidebarContent>
